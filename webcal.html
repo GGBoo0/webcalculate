@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+<style>
+    @font-face {
+        font-family: middle;
+        src: url();
+    }
+</style>
+</head>
+<body style="background-color: peachpuff;">
+    <h1 style="color: black;">
+        Simple Calculator
+    </h1>
+    <input type="text" id="expression">
+    <button onclick="calculate()">계산</button>
+    <div class="result" id="result">Result: </div>
+
+    <script>
+        function calculate() {
+            const input = document.getElementById('expression').value;
+        try{
+            const result = eval(input);
+            document.getElementById('result').innerText = `Result : ${result}`;
+        }catch(error)
+        {
+            document.getElementById('result').innerText = "Invalid input!";
+        }
+    }
+ 
+    </script>
+
+    
+</body>
+</html>
